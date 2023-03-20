@@ -12,6 +12,7 @@ class Personnummer:
         self.adderaTalenSetKontrollSiffra(separerade_tal)
 
     #funktioner som tillhör en klass kallas för metoder=Methods
+    #multipliceraMed2och1() - multiplicerar alla siffror med 2 - 1 osv
     def multipliceraMed2och1(self):
         
         i=0
@@ -32,7 +33,7 @@ class Personnummer:
             i+=1
    
         return listnumbers
-        
+    #separeraTal() separerar alla tal och lägger i lista
     def separeraTal(self, listnummren):
 
         i=0
@@ -55,7 +56,7 @@ class Personnummer:
             i += 1
 
         return lista_ensiffriga_tal
-    
+    #adderaTalenSetKontrollSiffra() Adderar alla talen i lista och subtraherar från högre 10tal
     def adderaTalenSetKontrollSiffra(self, list_ensifrigatal):
         
         summan = 0
@@ -68,6 +69,6 @@ class Personnummer:
         stortiotal = math.ceil(summan/10)*10
         self.slutsiffra = stortiotal - summan 
     
-    
+    #getKontrollSiffra - returnerar kontrollsiffra
     def getKontrollSiffra(self):
         return self.slutsiffra
